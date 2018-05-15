@@ -9,8 +9,10 @@ export default class AddTask extends Component {
   }
 
   addTask = () => {
-    this.props.addTask(this.state.value);
-    this.setState({ value: '' });
+    if (this.state.value !== '') {
+      this.props.addTask(this.state.value);
+      this.setState({ value: '' });
+    }
   }
 
   render() {

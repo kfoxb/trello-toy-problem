@@ -1,5 +1,5 @@
 import React from 'react';
-import Column from '../containers/ColumnContainer';
+import Column from '../components/Column';
 
 export default function App ({ addTask, people }) {
   return (
@@ -17,6 +17,7 @@ export default function App ({ addTask, people }) {
               addTask={addTask(index)}
               key={name}
               name={name}
+              tasks={person.get('tasks')}
               backgroundColor={person.get('backgroundColor')}
             />
           )
